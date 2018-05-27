@@ -1,0 +1,132 @@
+﻿#container {
+    margin: auto;
+    height: device-height;
+    width: device-width;
+}
+
+/* 目前有4個背景配色 */
+
+.bg-lvdr {
+    background: #FAE5D3;
+}
+
+.bg-drtaq {
+    background: #D6EAF8;
+}
+
+.bg-wsab {
+    background: #A8FBD6;
+}
+
+.bg-blywd {
+    background: #DEB887;
+}
+
+/* 目前有2種按鈕 */
+
+.sbmBtn {
+    width: 60px;
+    height: 35px;
+    border: 5px #FFFFFF double;
+    border-radius: 40%;
+    background: transparent;
+    font-family: '微軟正黑體'; //	font-weight: 700;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.littleBtn {
+    width: 20px;
+    height: 20px;
+    border: 2px #FFFFFF dashed;
+    display: inline;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+h1.result {
+    margin: auto;
+    color: #FFFFFF;
+    font-size: 70px;
+    width: device-width;
+    text-align: right;
+}
+
+#imgSty {
+    margin: auto;
+    height: device-height;
+    width: device-width;
+}
+
+.Menu {
+    font-family: '微軟正黑體';
+    background-color: #FCF3CF;
+    margin: auto;
+    width: 1000px;
+    height: 550px;
+    padding: 15px;
+}
+
+#header {
+    font-family: Lobster;
+    font-size: 40px;
+}
+
+#dinner {
+    font-family: Lobster;
+    font-size: 50px;
+}
+
+#DIV {
+    width: 175px;
+    line-height: 40px;
+    padding: 10px;
+    float: left;
+}
+
+#getMessage1,
+#getMessage2,
+#getMessage3,
+#getMessage4,
+#getMessage5 {
+    font-family: '微軟正黑體';
+    font-size: 15px;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border: 3px solid #008CBA;
+    cursor: pointer;
+}
+
+#getMessage1:hover,
+#getMessage2:hover,
+#getMessage3:hover,
+#getMessage4:hover,
+#getMessage5:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+#div {
+    width: 144px;
+    background-color: white;
+    border: 3px solid #008CBA;
+}
+
+.sal {
+    font-family: '微軟正黑體';
+    font-size: 15px;
+    width: 75px;
+    background-color: #DEDEDE;
+    cursor: pointer;
+}
+
+.sal:hover {
+    box-shadow: 2px 5px 8px #A1A1A1;
+}
+
+.sal:active {
+    box-shadow: 2px 2px 8px #A1A1A1;
+    transform: translateY(3px);
+}

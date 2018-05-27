@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DinnerDice!</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./DDiceStyle.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <script type="text/javascript" src="/jquery/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC" crossorigin="anonymous"></script>
+
+</head>
+
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $(".Message").hide();
+        $("#getMessage1").click(function() {
+            $("#Message1").slideToggle();
+        })
+        $("#getMessage2").click(function() {
+            $("#Message2").slideToggle();
+        })
+        $("#getMessage3").click(function() {
+            $("#Message3").slideToggle();
+        })
+        $("#getMessage4").click(function() {
+            $("#Message4").slideToggle();
+        })
+        $("#getMessage5").click(function() {
+            $("#Message5").slideToggle();
+        })
+        $('.sal').click(function() {
+            myArray.push($(this).val());
+            var pval = "";
+            for (i = 0; i < myArray.length; i++) {
+                pval = pval + myArray[i] + "<br/>";
+            }
+            document.getElementById('pText').innerHTML = pval;
+        });
+    });
+
+    function change() {
+        document.getElementById("mouse").innerHTML = "加入想吃的食物再點擊圖片即會得到你今日晚餐～";
+
+    }
+
+</script>
+
+<body id="container" class="bg-lvdr" onload="washTheme()">
+    <script src="Dice.js"></script>
+    <div style="text-align:center;">
+        <a href="javascript:void(0);" onclick="diceClick()">
+	  <img src="https://irisandmimi.github.io/DinnerDice/DiceBtn.png" id="imgSty" class="animated infinite bounce" alt=hi>
+	</a>
+    </div>
+    <div style="text-align:center; font-family:'微軟正黑體';">
+        <h1 id=dinner>Dinner Dice</h1>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+        <h1 class="animated infinite pulse">骰一下!</h1>
+        <input type="text" name="text" id="inputText" />
+        <button class="sbmBtn" onclick="pushData();">Add</button>
+        <p id="pText"></p>
+        <p id="Dice-rdm"></p>
+    </div>
+    <div style="text-align:right;">
+        <button class="littleBtn bg-lvdr" onclick="chgBgLvdr()"></button>
+        <button class="littleBtn bg-drtaq" onclick="chgBgDrtaq()"></button>
+        <button class="littleBtn bg-wsab" onclick="chgBgWsab()"></button>
+        <button class="littleBtn bg-blywd" onclick="chgBgBlywd()"></button>
+    </div>
+    <center>
+        <div id="mouse" onmouseover="change()">說明</div>
+    </center>
+    <br>
+    <div class="Menu">
+        <center>
+            <h2 id="header"><u>MENU</u></h2>
+            <h2>想不到有什麼好吃的嗎?這裡有推薦菜單可供參考喔!!</h2>
+        </center>
+
+        <div id="DIV">
+            <button id="getMessage1">
+          美式
+        </button>
+            <div id="div">
+                <ul class="Message" id="Message1">
+                    <li><input type="button" class="sal" value="漢堡"></li>
+                    <li><input type="button" class="sal" value="義大利麵"></li>
+                    <li><input type="button" class="sal" value="披薩"></li>
+                    <li><input type="button" class="sal" value="牛排"></li>
+                </ul>
+            </div>
+        </div>
+        <div id="DIV">
+            <button id="getMessage2">
+          韓式
+        </button>
+            <div id="div">
+                <ul class="Message" id="Message2">
+                    <li><input type="button" class="sal" value="拌飯"></li>
+                    <li><input type="button" class="sal" value="水冷麵"></li>
+                    <li><input type="button" class="sal" value="年糕"></li>
+                    <li><input type="button" class="sal" value="魚板"></li>
+                </ul>
+            </div>
+        </div>
+        <div id="DIV">
+            <button id="getMessage3">
+          中式
+        </button>
+            <div id="div">
+                <ul class="Message" id="Message3">
+                    <li><input type="button" class="sal" value="火鍋"></li>
+                    <li><input type="button" class="sal" value="陽春麵"></li>
+                    <li><input type="button" class="sal" value="便當"></li>
+                    <li><input type="button" class="sal" value="三明治"></li>
+                    <li><input type="button" class="sal" value="自助餐"></li>
+                    <li><input type="button" class="sal" value="炸物"></li>
+                </ul>
+            </div>
+        </div>
+        <div id="DIV">
+            <button id="getMessage4">
+          日式
+        </button>
+            <div id="div">
+                <ul class="Message" id="Message4">
+                    <li><input type="button" class="sal" value="壽司"></li>
+                    <li><input type="button" class="sal" value="生魚片"></li>
+                    <li><input type="button" class="sal" value="烏龍麵"></li>
+                    <li><input type="button" class="sal" value="天婦羅"></li>
+                    <li><input type="button" class="sal" value="甜不辣"></li>
+                    <li><input type="button" class="sal" value="拉麵"></li>
+                </ul>
+            </div>
+        </div>
+        <div id="DIV">
+            <button id="getMessage5">
+          甜點
+        </button>
+            <div id="div">
+                <ul class="Message" id="Message5">
+                    <li><input type="button" class="sal" value="冰棒"></li>
+                    <li><input type="button" class="sal" value="蛋糕"></li>
+                    <li><input type="button" class="sal" value="飲料"></li>
+                    <li><input type="button" class="sal" value="果凍"></li>
+                    <li><input type="button" class="sal" value="紅豆湯"></li>
+                    <li><input type="button" class="sal" value="沙拉"></li>
+                    <li><input type="button" class="sal" value="水果"></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+</body>
+
+</html>
